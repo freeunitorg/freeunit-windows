@@ -1,0 +1,5 @@
+# Local working state, never committed
+run/
+.scratch/
+*.swp
+.DS_Store

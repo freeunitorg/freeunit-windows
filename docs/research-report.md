@@ -126,7 +126,7 @@ The steady cost is countable. **Windows-related items are about 3% of nginx's tr
 
 ### Is the effort justified
 
-As a production platform it is not. Only 13.15% of respondents to the Perforce 2025 survey deploy PHP on Windows at all, and 4.50% use IIS, from 561 responses ([Perforce report](https://www.zend.com/system/files/2025-06/report-zend-2025-php-landscape-report_0.pdf)). As a bounded development target it can be. The companion project freeunit4drupal, which has no public repository yet, is the first customer: it plans a Docker-free local Drupal environment on FreeUnit, macOS and Linux first, with Windows users in WSL2 until a native build exists. A native build would let one FreeUnit configuration serve Drupal on all three desktop systems, with project files on NTFS. That justifies spending a small, gated amount to measure the unknowns. It does not justify an open-ended port.
+As a production platform it is not. Only 13.15% of respondents to the Perforce 2025 survey deploy PHP on Windows at all, and 4.50% use IIS, from 561 responses ([Perforce report](https://www.zend.com/system/files/2025-06/report-zend-2025-php-landscape-report_0.pdf)). As a bounded development target it can be. The companion project freeunit4drupal (https://github.com/freeunitorg/freeunit4drupal) is the first customer: it plans a Docker-free local Drupal environment on FreeUnit, macOS and Linux first, with Windows users in WSL2 until a native build exists. A native build would let one FreeUnit configuration serve Drupal on all three desktop systems, with project files on NTFS. That justifies spending a small, gated amount to measure the unknowns. It does not justify an open-ended port.
 
 ## 5. Four disagreements between the notes, and the evidence that settles each
 

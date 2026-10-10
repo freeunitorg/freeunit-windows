@@ -61,12 +61,29 @@ Docs: https://code.claude.com/docs/en/setup
 
 ## 4. Repositories
 
+All repositories are public. Cloning over HTTPS needs no GitHub account; only pushing and opening pull
+requests do. Until the account exists, clone anonymously and send patches as `git format-patch` files.
+
 ```powershell
 mkdir C:\src; cd C:\src
-gh auth login
-gh repo clone freeunitorg/freeunit-windows
-gh repo clone freeunitorg/freeunit
+git clone https://github.com/freeunitorg/freeunit-windows.git   # the plan, Phase 0 experiments, results
+git clone https://github.com/freeunitorg/freeunit.git           # the server; every plan citation is at 872bf041
 ```
+
+In WSL, under `/home/<user>/src`:
+
+```sh
+git clone https://github.com/freeunitorg/freeunit.git           # Linux build for comparisons
+git clone https://github.com/freeunitorg/freeunit-harness.git   # build, test, review and perf tooling for agents
+```
+
+Optional, for background reading only: https://github.com/freeunitorg/docs (user documentation),
+https://github.com/freeunitorg/freeunit4drupal (the sibling Drupal project), and the archived upstream
+https://github.com/nginx/unit. If `git clone` is blocked, every repository has a zip under
+`https://github.com/freeunitorg/<name>/archive/refs/heads/main.zip` (`master.zip` for freeunit).
+
+Once the account exists: `gh auth login`, fork `freeunit-windows`, add the fork as remote `fork`, and push
+branches there. Until then: `git format-patch origin/main` in the experiment branch and send the files.
 
 Read `freeunit-windows/docs/plan.md` sections 1, 2 and 5 before the first experiment. Every C citation in
 the plan uses revision 872bf041 of freeunit; check it out in a worktree when you need to read code:
